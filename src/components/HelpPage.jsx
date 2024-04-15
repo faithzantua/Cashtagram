@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Style/HelpPage.module.css'; // Import the CSS Module
+import styles from '../style/HelpPage.module.css'; // Import the CSS Module
 
-const HelpPage = () => {
+function HelpPage() {
   return (
     <div className={styles.container}>
       <div>

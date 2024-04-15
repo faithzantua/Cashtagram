@@ -1,0 +1,55 @@
+.recentExpenses {
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    width: 450px; 
+}
+
+.recentExpenses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recentExpenses li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.recentExpenses li:last-child {
+    border-bottom: none;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.recentExpenses .description {
+    font-size: 18px;
+    color: #333;
+}
+
+.recentExpenses .amount {
+    font-size: 16px;
+    color: #555;
+}
+
+.recentExpenses .date {
+    font-size: 12px;
+    color: #777;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.viewAllExpensesBtn {
+    font-size: 16px;
+    color: #3B5704;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,12 +1,12 @@
 /* custom fonts */
 @font-face {
     font-family: 'Biryani';
-    src: url('../Fonts/Biryani-Light.ttf');
+    src: url('../fonts/Biryani-Light.ttf');
   }
   
   @font-face {
     font-family: 'TT Interphases Bold';
-    src: url('../Fonts/TT Interphases Pro Trial Bold.ttf');
+    src: url('../fonts/TT Interphases Pro Trial Bold.ttf');
   }
   
 
@@ -32,7 +32,6 @@
     font-family: 'TT Interphases Bold';
   }
   
-  /* navbar */
   .navbar {
     background-color: #c7dfa2; 
     padding: 10px 20px;
@@ -43,18 +42,16 @@
     min-height: 70px;
   }
   
-  /* ul */
+
   .navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    background-color: transparent; /* Ensure background is transparent */
+    background-color: transparent; 
   }
   
-  /* media queries */
   
   @media screen and (max-width: 780px) {
-    /* Your existing media query styles */
   }
   

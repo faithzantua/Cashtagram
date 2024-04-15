@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Style/Navbar.module.css';
-import logo from './Assets/Logo.png';
+import styles from '../style/Navbar.module.css';
+import logo from '../assets/Logo.png';
+import { signOut } from 'firebase/auth'; 
+import { auth } from '../firebase'; 
+import { onAuthStateChanged } from 'firebase/auth'; 
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
+  const [user, setUser] = useState(null);
 
   const toggleActiveClass = () => {
     setIsActive(!isActive);
@@ -12,6 +16,22 @@ function Navbar() {
 
   const removeActive = () => {
     setIsActive(false);
+  };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
   };
 
   return (
@@ -34,6 +54,7 @@ function Navbar() {
             <li onClick={removeActive}>
               <NavLink to='/help' className={`${styles.navLink}`} activeClassName={styles.active}>Help</NavLink>
             </li>
+            <li><button className={styles.logOut} onClick={handleLogout}>Logout</button></li>
           </ul>
           <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`} onClick={toggleActiveClass}>
             <span className={`${styles.bar}`}></span>

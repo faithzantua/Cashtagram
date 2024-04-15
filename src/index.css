@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  padding: 8px 16px;
+  background-color: #3B5704;
+  color: #F1FED1;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'TT Interphases Bold';
+}
+
+button:hover {
+  background-color: #c7dfa2;
+  color: #3B5704;
+}
+
+input{
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}

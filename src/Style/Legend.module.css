@@ -1,0 +1,19 @@
+/* Legend.module.css */
+.legendContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Adjust as needed */
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .colorBox {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
